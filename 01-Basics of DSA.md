@@ -10,3 +10,13 @@
 - Understanding data structures is crucial for developing software and programs.
 - This article provides a complete guide on types, classifications, and applications of data structures.
 - The goal is to help readers choose the most suitable data structure quickly.
+
+
+| | Data Type | Data Structure |
+|---|---|
+| Definition            | Represents the form or type of a variable                       | Represents a collection of different data                      |
+| Value Storage         | Holds values of a specific data type                            | Can hold multiple types of data within a single object         |
+| Implementation        | Abstract implementation                                       | Concrete implementation                                      |
+| Time Complexity       | No time complexity                                            | Time complexity plays a role                                 |
+| Data Storage          | Does not store data, only represents the type                   | Stores data and its values in computer memory                 |
+| Examples              | int, float, double, etc.                                      | stack, queue, tree, etc.                                      |
