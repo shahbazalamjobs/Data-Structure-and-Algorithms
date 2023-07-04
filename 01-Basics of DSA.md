@@ -12,6 +12,8 @@
 - The goal is to help readers choose the most suitable data structure quickly.
 
 
+# Data type Vs Data Structure
+
 | | Data Type | Data Structure |
 |---|---|---|
 | Definition            | Represents the form or type of a variable                       | Represents a collection of different data                      |
