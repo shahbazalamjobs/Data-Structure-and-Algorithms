@@ -32,6 +32,7 @@
 - Static data structure: Fixed memory size, easy access to elements. Example: array.
 - Dynamic data structure: Size not fixed, can be updated during runtime. Examples: queue, stack.
 - Non-linear data structure: Data elements not placed sequentially, traversal requires multiple runs. Examples: trees, graphs.
+- https://www.javatpoint.com/data-structure-introduction
 
 **********
 
@@ -50,5 +51,13 @@
 - Easy access to the large database.
 
 **********
+
+## Array
+
+- Linear Structure: Arrays are linear data structures storing items in contiguous memory locations.
+- Collection of Items: They hold multiple items of the same type in one place.
+- Efficient Data Processing: Arrays allow processing a large amount of data quickly.
+- Zero-Based Indexing: The first element is accessed using a subscript of 0.
+- Array Operations: Arrays support various operations like searching, sorting, inserting, traversing, reversing, and deleting.
 
 
