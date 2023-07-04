@@ -26,7 +26,7 @@
 
 **********
 
-## Classification of Data Structure in Simple Points:
+## Classification of Data Structure:
 
 - Linear data structure: Data elements arranged sequentially with each element connected to its previous and next elements. Examples: array, stack, queue, linked list.
 - Static data structure: Fixed memory size, easy access to elements. Example: array.
@@ -34,3 +34,19 @@
 - Non-linear data structure: Data elements not placed sequentially, traversal requires multiple runs. Examples: trees, graphs.
 
 **********
+
+## Need Of Data structure :
+- The structure of the data and the synthesis of the algorithm are relative to each other.
+- Data presentation must be easy to understand so the developer, as well as the user, can make an efficient implementation of the operation.
+- Data structures provide an easy way of organizing, retrieving, managing, and storing data.
+
+Here is a list of the needs for data.
+- Data structure modification is easy. 
+- It requires less time.
+- Save storage memory space.
+- Data representation is easy.
+- Easy access to the large database.
+
+**********
+
+
