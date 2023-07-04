@@ -12,7 +12,7 @@
 - The goal is to help readers choose the most suitable data structure quickly.
 
 
-# Data type Vs Data Structure
+## Data type Vs Data Structure
 
 | | Data Type | Data Structure |
 |---|---|---|
