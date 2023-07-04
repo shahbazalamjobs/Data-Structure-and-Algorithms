@@ -13,7 +13,7 @@
 
 
 | | Data Type | Data Structure |
-|---|---|
+|---|---|---|
 | Definition            | Represents the form or type of a variable                       | Represents a collection of different data                      |
 | Value Storage         | Holds values of a specific data type                            | Can hold multiple types of data within a single object         |
 | Implementation        | Abstract implementation                                       | Concrete implementation                                      |
