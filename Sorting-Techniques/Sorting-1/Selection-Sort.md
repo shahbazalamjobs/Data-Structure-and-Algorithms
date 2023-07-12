@@ -12,7 +12,8 @@ Output: 1,2,3,4,5
 Explanation: After sorting the array is: 1, 2, 3, 4, 5
 ```
 
-```Selection sort approach:
+Selection sort approach:
+```c
 
 1. The selection sort algorithm repeatedly finds the minimum element from the unsorted part of the array.
 2. It starts with the first element and searches for a smaller element in the remaining unsorted part.
