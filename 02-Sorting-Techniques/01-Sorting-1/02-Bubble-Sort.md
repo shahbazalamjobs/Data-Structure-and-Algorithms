@@ -23,6 +23,9 @@ Bubble sort approach:
 7. The sorted array is printed for verification.
 ```
 
+![image](https://github.com/shahbazalamjobs/Data-Structure-and-Algorithms/assets/125631878/d2d9a26d-d67c-4e20-a3b0-0c7e60d81392)
+
+
 Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process is repeated until the list is sorted.
 
 ```cpp
