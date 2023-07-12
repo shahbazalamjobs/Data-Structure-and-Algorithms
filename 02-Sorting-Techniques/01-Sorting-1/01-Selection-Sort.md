@@ -12,7 +12,6 @@ Output: 1,2,3,4,5
 Explanation: After sorting the array is: 1, 2, 3, 4, 5
 ```
 
-https://he-s3.s3.amazonaws.com/media/uploads/2888f5b.png
 
 Selection sort approach:
 ```cpp
@@ -25,6 +24,8 @@ Selection sort approach:
 6. The provided code demonstrates this algorithm by sorting an example array in ascending order.
 7. The sorted array is printed for verification.
 ```
+![image](https://github.com/shahbazalamjobs/Data-Structure-and-Algorithms/assets/125631878/42a7a6ff-c9af-4c84-b2eb-9179d117c20f)
+
 
 Selection sort is a simple sorting algorithm that works by repeatedly finding the minimum element from the unsorted part of an array and swapping it with the element at the beginning of the unsorted part. This process is repeated until the entire array is sorted.
 
