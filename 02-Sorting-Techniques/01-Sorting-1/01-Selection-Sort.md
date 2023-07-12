@@ -12,6 +12,8 @@ Output: 1,2,3,4,5
 Explanation: After sorting the array is: 1, 2, 3, 4, 5
 ```
 
+https://he-s3.s3.amazonaws.com/media/uploads/2888f5b.png
+
 Selection sort approach:
 ```cpp
 
