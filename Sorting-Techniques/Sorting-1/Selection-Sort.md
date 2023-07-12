@@ -1,10 +1,10 @@
 # Selection Sort
 
-## Selection sort is a simple sorting algorithm that works by repeatedly finding the minimum element from the unsorted part of an array and swapping it with the element at the beginning of the unsorted part. This process is repeated until the entire array is sorted.
+### Selection sort is a simple sorting algorithm that works by repeatedly finding the minimum element from the unsorted part of an array and swapping it with the element at the beginning of the unsorted part. This process is repeated until the entire array is sorted.
 
 Here's an explanation of the selection sort algorithm implemented in C++:
 
-```
+```cpp
 #include <iostream>
 
 void selectionSort(int arr[], int size) {
