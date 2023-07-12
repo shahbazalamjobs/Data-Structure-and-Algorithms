@@ -12,7 +12,7 @@ Output: 1,2,3,4,5
 Explanation: After sorting we get 1,2,3,4,5
 ```
 
-Certainly! Here's a concise explanation of the bubble sort approach implemented in the provided C++ code:
+Bubble sort approach:
 ```cpp
 1. The bubble sort algorithm repeatedly compares adjacent elements in the array.
 2. If the current element is greater than the next element, they are swapped.
@@ -24,8 +24,6 @@ Certainly! Here's a concise explanation of the bubble sort approach implemented 
 ```
 
 Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process is repeated until the list is sorted.
-
-Here's an explanation of the bubble sort algorithm implemented in C++:
 
 ```cpp
 #include <iostream>
@@ -79,4 +77,3 @@ Original array: 64 34 25 12 22 11 90
 Sorted array: 11 12 22 25 34 64 90
 ```
 
-This demonstrates the bubble sort algorithm's operation in sorting an array in ascending order.
