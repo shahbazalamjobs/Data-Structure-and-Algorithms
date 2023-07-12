@@ -22,9 +22,6 @@ Selection sort approach:
 5. The algorithm repeats these steps until the second-to-last element, as the last element is already in its correct position.
 6. The provided code demonstrates this algorithm by sorting an example array in ascending order.
 7. The sorted array is printed for verification.
-
-Overall, selection sort selects the minimum element from the unsorted part and places it in its correct position in each iteration, resulting in a sorted array.
-
 ```
 
 Selection sort is a simple sorting algorithm that works by repeatedly finding the minimum element from the unsorted part of an array and swapping it with the element at the beginning of the unsorted part. This process is repeated until the entire array is sorted.
