@@ -1,6 +1,6 @@
 # Selection Sort
 
-### Selection sort is a simple sorting algorithm that works by repeatedly finding the minimum element from the unsorted part of an array and swapping it with the element at the beginning of the unsorted part. This process is repeated until the entire array is sorted.
+Selection sort is a simple sorting algorithm that works by repeatedly finding the minimum element from the unsorted part of an array and swapping it with the element at the beginning of the unsorted part. This process is repeated until the entire array is sorted.
 
 Here's an explanation of the selection sort algorithm implemented in C++:
 
@@ -45,14 +45,21 @@ int main() {
 
 ```
 
-In the selectionSort function, the outer loop iterates over the array from the beginning to the second-to-last element. For each iteration, it assumes the current element is the minimum and searches for a smaller element in the unsorted part of the array.
+- In the selectionSort function, the outer loop iterates over the array from the beginning to the second-to-last element. For each iteration, it assumes the current element is the minimum and searches for a smaller element in the unsorted part of the array.
 
-The inner loop starts from i+1 and compares each subsequent element with the assumed minimum. If a smaller element is found, the index of that element is stored in minIndex.
+- The inner loop starts from i+1 and compares each subsequent element with the assumed minimum. If a smaller element is found, the index of that element is stored in minIndex.
 
-After finding the minimum element, a swap is performed between the current element (arr[i]) and the minimum element (arr[minIndex]). This places the minimum element in its correct sorted position at the beginning of the unsorted part.
+- After finding the minimum element, a swap is performed between the current element (arr[i]) and the minimum element (arr[minIndex]). This places the minimum element in its correct sorted position at the beginning of the unsorted part.
 
-The process continues until the entire array is sorted, resulting in the array being sorted in ascending order.
+- The process continues until the entire array is sorted, resulting in the array being sorted in ascending order.
 
-In the main function, an example array {64, 25, 12, 22, 11} is used. The size of the array is calculated, and then the original and sorted arrays are printed for verification.
+- In the main function, an example array {64, 25, 12, 22, 11} is used. The size of the array is calculated, and then the original and sorted arrays are printed for verification.
+
 
 The output of the program will be:
+
+```cpp
+Original array: 64 25 12 22 11
+Sorted array: 11 12 22 25 64
+```
+**********
