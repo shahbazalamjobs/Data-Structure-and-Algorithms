@@ -72,7 +72,7 @@ After each pass, the largest element in the unsorted part of the array moves to 
 In the `main` function, an example array `{64, 34, 25, 12, 22, 11, 90}` is used. The size of the array is calculated, and then the original and sorted arrays are printed for verification.
 
 The output of the program will be:
-```
+```cpp
 Original array: 64 34 25 12 22 11 90
 Sorted array: 11 12 22 25 34 64 90
 ```
