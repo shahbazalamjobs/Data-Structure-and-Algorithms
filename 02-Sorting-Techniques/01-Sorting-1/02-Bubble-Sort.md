@@ -81,3 +81,11 @@ Original array: 64 34 25 12 22 11 90
 Sorted array: 11 12 22 25 34 64 90
 ```
 
+### Time Complexity:
+Best Case: O(n) - If the array is already sorted, bubble sort will make a single pass through the array without any swaps.
+Worst Case: O(n^2) - If the array is in reverse order, bubble sort will make n-1 passes through the array, each time comparing and swapping adjacent elements.
+Average Case: O(n^2) - On average, bubble sort will make (n-1)/2 passes through the array, resulting in a quadratic time complexity.
+
+### Space Complexity:
+The space complexity of the bubble sort algorithm is O(1) because it uses a constant amount of extra space for temporary variables during the swapping process.
+
