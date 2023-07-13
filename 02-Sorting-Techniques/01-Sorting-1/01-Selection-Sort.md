@@ -95,7 +95,7 @@ Sorted array: 11 12 22 25 64
 - The time complexity of the selection sort algorithm is O(n^2), where n is the size of the input array.
 - The outer loop iterates n-1 times, representing the number of passes through the array. In each pass, the algorithm searches for the minimum element in the remaining unsorted part of the array using the inner loop. The inner loop iterates (n-i-1) times, where i is the index of the current pass.
 - To analyze the time complexity, we can consider the worst-case scenario, where the input array is in reverse order. In this case, the inner loop will iterate (n-1) times in the first pass, (n-2) times in the second pass, and so on until it iterates only once in the last pass.
-- The total number of comparisons and swaps performed by the selection sort algorithm can be expressed as:
+- The total number of comparisons and swaps performed by the selection sort algorithm can be expressed as: <br>
 ` (n-1) + (n-2) + (n-3) + ... + 2 + 1 `
 - This is an arithmetic series, and its sum can be calculated as (n^2 - n) / 2.
 - However, in Big O notation, we drop the constant factors and lower-order terms. Therefore, the time complexity of the selection sort algorithm is O(n^2).
