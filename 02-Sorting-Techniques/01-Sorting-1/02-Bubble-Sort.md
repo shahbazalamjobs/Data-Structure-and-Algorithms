@@ -29,43 +29,42 @@ Bubble sort approach:
 Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process is repeated until the list is sorted.
 
 ```cpp
-#include <iostream>
-
-using namespace std;
-
-void bubbleSort(int arr[], int size) {
-    for (int i = 0; i < size - 1; ++i) {
-        // Last i elements are already in place, so no need to check them
-        for (int j = 0; j < size - i - 1; ++j) {
-            // Compare adjacent elements
-            if (arr[j] > arr[j + 1]) {
-                // Swap them if they are in the wrong order
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+    #include <iostream>
+    using namespace std;
+    
+    void bubbleSort(int arr[], int size) {
+        for (int i = 0; i < size - 1; ++i) {
+            // Last i elements are already in place, so no need to check them
+            for (int j = 0; j < size - i - 1; ++j) {
+                // Compare adjacent elements
+                if (arr[j] > arr[j + 1]) {
+                    // Swap them if they are in the wrong order
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
             }
         }
     }
-}
-
-int main() {
-    int arr[] = {64, 34, 25, 12, 22, 11, 90};
-    int size = sizeof(arr) / sizeof(arr[0]);
-
-    cout << "Original array: ";
-    for (int i = 0; i < size; ++i) {
-        cout << arr[i] << " ";
+    
+    int main() {
+        int arr[] = {64, 34, 25, 12, 22, 11, 90};
+        int size = sizeof(arr) / sizeof(arr[0]);
+    
+        cout << "Original array: ";
+        for (int i = 0; i < size; ++i) {
+            cout << arr[i] << " ";
+        }
+    
+        bubbleSort(arr, size);
+    
+        cout << "\nSorted array: ";
+        for (int i = 0; i < size; ++i) {
+            cout << arr[i] << " ";
+        }
+    
+        return 0;
     }
-
-    bubbleSort(arr, size);
-
-    cout << "\nSorted array: ";
-    for (int i = 0; i < size; ++i) {
-        cout << arr[i] << " ";
-    }
-
-    return 0;
-}
 ```
 
 In the `bubbleSort` function, the outer loop iterates from the beginning of the array to the second-to-last element. This loop represents the number of passes required to sort the array.
