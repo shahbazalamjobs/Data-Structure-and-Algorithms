@@ -33,6 +33,7 @@ Here's an explanation of the selection sort algorithm implemented in C++:
 
 ```cpp
 #include <iostream>
+using namespace std;
 
 void selectionSort(int arr[], int size) {
     for (int i = 0; i < size - 1; ++i) {
@@ -55,21 +56,20 @@ int main() {
     int arr[] = {64, 25, 12, 22, 11};
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    std::cout << "Original array: ";
+    cout << "Original array: ";
     for (int i = 0; i < size; ++i) {
-        std::cout << arr[i] << " ";
+        cout << arr[i] << " ";
     }
 
     selectionSort(arr, size);
 
-    std::cout << "\nSorted array: ";
+    cout << "\nSorted array: ";
     for (int i = 0; i < size; ++i) {
-        std::cout << arr[i] << " ";
+        cout << arr[i] << " ";
     }
 
     return 0;
 }
-
 ```
 
 - In the selectionSort function, the outer loop iterates over the array from the beginning to the second-to-last element. For each iteration, it assumes the current element is the minimum and searches for a smaller element in the unsorted part of the array.
@@ -90,3 +90,14 @@ Original array: 64 25 12 22 11
 Sorted array: 11 12 22 25 64
 ```
 **********
+
+### Time Complexity
+- The time complexity of the selection sort algorithm is O(n^2), where n is the size of the input array.
+- The outer loop iterates n-1 times, representing the number of passes through the array. In each pass, the algorithm searches for the minimum element in the remaining unsorted part of the array using the inner loop. The inner loop iterates (n-i-1) times, where i is the index of the current pass.
+- To analyze the time complexity, we can consider the worst-case scenario, where the input array is in reverse order. In this case, the inner loop will iterate (n-1) times in the first pass, (n-2) times in the second pass, and so on until it iterates only once in the last pass.
+- The total number of comparisons and swaps performed by the selection sort algorithm can be expressed as:
+` (n-1) + (n-2) + (n-3) + ... + 2 + 1 `
+- This is an arithmetic series, and its sum can be calculated as (n^2 - n) / 2.
+- However, in Big O notation, we drop the constant factors and lower-order terms. Therefore, the time complexity of the selection sort algorithm is O(n^2).
+- It's important to note that selection sort is not considered an efficient algorithm for large datasets due to its quadratic time complexity. Other sorting algorithms like quicksort, mergesort, or heapsort generally provide better performance for larger inputs.
+- Space complexity: O(1)
