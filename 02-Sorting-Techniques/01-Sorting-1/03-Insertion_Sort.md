@@ -30,7 +30,6 @@ It repeatedly takes an element from the unsorted part of the array and inserts i
 
 ```cpp
 #include <iostream>
-
 using namespace std;
 
 void insertionSort(int arr[], int size) {
