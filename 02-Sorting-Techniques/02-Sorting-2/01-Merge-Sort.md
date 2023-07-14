@@ -13,6 +13,7 @@ Merge sort is a divide-and-conquer sorting algorithm that works by dividing the 
 6. The merge operation is performed recursively, combining smaller sorted sequences into larger ones until the entire array is sorted.
 7. Merge sort has a time complexity of O(n log n) in all cases, making it an efficient sorting algorithm for large datasets.
 ```
+![image](https://github.com/shahbazalamjobs/Data-Structure-and-Algorithms/assets/125631878/00b7bac9-e964-415d-9652-444457a55e68)
 
 ```cpp
 #include <iostream>
@@ -113,9 +114,7 @@ The `mergeSort` function is the main entry point for the merge sort algorithm. I
 5. Free Memory: Free the dynamically allocated memory for the temporary left and right arrays.
 ```
 - The `merge` function compares the elements from the left and right subarrays and inserts them into the `arr` array in sorted order. It uses three indices (`i`, `j`, `k`) to keep track of the positions in the left, right, and merged arrays, respectively.
-
 - Finally, in the `main` function, we initialize the input array, call `mergeSort` to sort it, and then print the sorted array.
-
 - When you run this program, it will output the sorted array as follows:
 
 Output:
@@ -125,7 +124,6 @@ Sorted array: 11 12 22 25 64
 ```
 
 ### Time Complexity 
-
 1. Merge sort has a time complexity of O(n log n) in all cases.
 2. The algorithm recursively divides the input array into halves until each half contains only one element, which takes O(log n) time.
 3. The merging step, where the sorted halves are combined, takes O(n) time.
@@ -133,8 +131,7 @@ Sorted array: 11 12 22 25 64
 5. The time complexity of merge sort is stable and does not depend on the initial order of the elements in the array.
 
 ### Space Complexity
-```
 1. Merge sort has a space complexity of O(n) in the worst-case scenario.
 2. The algorithm requires additional space to store the temporary arrays used during the merging process.
 3. As the input size increases, the amount of additional space required grows linearly with the size of the input array.
-```
+
