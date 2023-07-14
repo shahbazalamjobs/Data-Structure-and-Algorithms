@@ -13,8 +13,7 @@ Input: N=5, array[] = {5,4,3,2,1}
 Output: 1,2,3,4,5
 Explanation: After sorting the array is: 1,2,3,4,5
 ```
-
-
+![image](https://github.com/shahbazalamjobs/Data-Structure-and-Algorithms/assets/125631878/014167ce-d1c2-45e0-aae3-9069d9eae907)
 
 Insertion sort is a simple sorting algorithm that works by building a sorted portion of the array from left to right.
 It repeatedly takes an element from the unsorted part of the array and inserts it into its correct position within the sorted part of the array. 
