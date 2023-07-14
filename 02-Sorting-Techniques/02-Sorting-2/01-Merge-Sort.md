@@ -125,12 +125,13 @@ Sorted array: 11 12 22 25 64
 ```
 
 ### Time Complexity 
+```
 - Merge sort has a time complexity of O(n log n) in all cases.
 - The algorithm recursively divides the input array into halves until each half contains only one element, which takes O(log n) time.
 - The merging step, where the sorted halves are combined, takes O(n) time.
 - Since the merging step is performed log n times (due to the recursive nature of merge sort), the overall time complexity is O(n log n).
 - The time complexity of merge sort is stable and does not depend on the initial order of the elements in the array.
-
+```
 ### Space Complexity
 ```
 1. Merge sort has a space complexity of O(n) in the worst-case scenario.
