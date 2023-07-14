@@ -2,8 +2,21 @@
 
 Merge sort is a divide-and-conquer sorting algorithm that works by dividing the input array into smaller halves, sorting them individually, and then merging the sorted halves to produce a sorted array. Here's an explanation of how the merge sort algorithm works in C++:
 
+
+## Merge Sort Approach 
+```cpp
+1. Merge sort is a divide-and-conquer algorithm that recursively divides the input array into smaller halves.
+2. The algorithm works by splitting the array into two halves until each half contains only one element (which is considered sorted).
+3. It then merges the sorted halves by comparing elements from both halves and placing them in the correct order.
+4. The merging process continues until the entire array is sorted.
+5. The key step is the merge operation, where the algorithm compares elements from the two sorted halves and combines them into a single sorted sequence.
+6. The merge operation is performed recursively, combining smaller sorted sequences into larger ones until the entire array is sorted.
+7. Merge sort has a time complexity of O(n log n) in all cases, making it an efficient sorting algorithm for large datasets.
+```
+
 ```cpp
 #include <iostream>
+using namespace std;
 
 void merge(int arr[], int left[], int leftSize, int right[], int rightSize) {
     int i = 0; // Index for the left subarray
@@ -73,16 +86,16 @@ int main() {
     int arr[] = {64, 25, 12, 22, 11};
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    std::cout << "Original array: ";
+    cout << "Original array: ";
     for (int i = 0; i < size; ++i) {
-        std::cout << arr[i] << " ";
+        cout << arr[i] << " ";
     }
 
     mergeSort(arr, size);
 
-    std::cout << "\nSorted array: ";
+    cout << "\nSorted array: ";
     for (int i = 0; i < size; ++i) {
-        std::cout << arr[i] << " ";
+        cout << arr[i] << " ";
     }
 
     return 0;
@@ -92,26 +105,29 @@ int main() {
 In this code, we have a function called `merge` that merges two sorted subarrays, `left` and `right`, into a single sorted array `arr`. This merging process is done in-place.
 
 The `mergeSort` function is the main entry point for the merge sort algorithm. It takes an array `arr` and its size `size` as arguments. The function follows the divide-and-conquer approach:
-
+```cpp
 1. Base Case: If the size of the array is less than or equal to 1, it is already sorted, so we return.
-
 2. Divide: Split the array into two halves at the midpoint.
-
 3. Recursively Sort: Call `mergeSort` on the left and right halves.
-
 4. Merge: Merge the sorted left and right halves using the `merge` function.
-
 5. Free Memory: Free the dynamically allocated memory for the temporary left and right arrays.
-
-The `merge` function compares the elements from the left and right subarrays and inserts them into the `arr` array in sorted order. It uses three indices (`i`, `j`, `k`) to keep track of the positions in the left, right, and merged arrays, respectively.
-
-Finally, in the `main` function, we initialize the input array, call `mergeSort` to sort it, and then print the sorted array.
-
-When you run this program, it will output the sorted array as follows:
-
 ```
+- The `merge` function compares the elements from the left and right subarrays and inserts them into the `arr` array in sorted order. It uses three indices (`i`, `j`, `k`) to keep track of the positions in the left, right, and merged arrays, respectively.
+
+- Finally, in the `main` function, we initialize the input array, call `mergeSort` to sort it, and then print the sorted array.
+
+- When you run this program, it will output the sorted array as follows:
+
+Output:
+```cpp
 Original array: 64 25 12 22 11
 Sorted array: 11 12 22 25 64
 ```
 
-This demonstrates the merge sort algorithm's ability to sort an array in ascending order.
+### Time Complexity 
+- Merge sort has a time complexity of O(n log n) in all cases.
+- The algorithm recursively divides the input array into halves until each half contains only one element, which takes O(log n) time.
+- The merging step, where the sorted halves are combined, takes O(n) time.
+- Since the merging step is performed log n times (due to the recursive nature of merge sort), the overall time complexity is O(n log n).
+- The time complexity of merge sort is stable and does not depend on the initial order of the elements in the array.
+
