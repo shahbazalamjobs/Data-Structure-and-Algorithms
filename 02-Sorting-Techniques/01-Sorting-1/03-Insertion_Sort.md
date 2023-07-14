@@ -82,16 +82,16 @@ Sorted array: 11 12 22 25 64
 ```
 
 ### Time Complexity:
-```
-The worst-case time complexity of insertion sort is O(n^2), where n is the number of elements in the list.
-In the worst case, insertion sort requires approximately n^2/2 comparisons and swaps.
-The best-case time complexity of insertion sort is O(n), which occurs when the list is already sorted.
-The average-case time complexity is also O(n^2).
-```
+
+- The worst-case time complexity of insertion sort is O(n^2), where n is the number of elements in the list.
+- In the worst case, insertion sort requires approximately n^2/2 comparisons and swaps.
+- The best-case time complexity of insertion sort is O(n), which occurs when the list is already sorted.
+- The average-case time complexity is also O(n^2).
+
 ### Space Complexity:
-```
-Insertion sort has a space complexity of O(1) because it operates directly on the input list.
-It does not require additional space proportional to the size of the input.
-In summary, the time complexity of insertion sort is O(n^2), making it inefficient for large lists. However, it performs well on partially sorted or small lists. The space complexity is O(1), meaning it does not require extra memory beyond the input list.
-```
+
+- Insertion sort has a space complexity of O(1) because it operates directly on the input list.
+- It does not require additional space proportional to the size of the input.
+- In summary, the time complexity of insertion sort is O(n^2), making it inefficient for large lists. However, it performs well on partially sorted or small lists. The space complexity is O(1), meaning it does not require extra memory beyond the input list.
+
 
