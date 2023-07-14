@@ -16,10 +16,11 @@ Explanation: After sorting the array is: 1,2,3,4,5
 
 Approach of  insertion sort algorithm:
 ```cpp
-1. Insertion sort maintains a sorted portion and an unsorted portion.
-2. It iterates through the unsorted portion, inserting each element into its correct position within the sorted portion.
-3. Elements in the sorted portion are shifted to the right if they are larger than the current element.
-4. The algorithm repeats this process until the entire list becomes sorted.
+1. Insertion sort maintains a sorted portion and an unsorted portion of the list.
+2. It iterates through the unsorted portion, one element at a time.
+3. For each element, it compares it with the elements in the sorted portion, shifting larger elements to the right.
+4. The process continues until the correct position for the current element is found within the sorted portion.
+5. The element is then inserted into the sorted portion, and this process repeats until the entire list becomes sorted.
 ```
 
 ![image](https://github.com/shahbazalamjobs/Data-Structure-and-Algorithms/assets/125631878/014167ce-d1c2-45e0-aae3-9069d9eae907)
