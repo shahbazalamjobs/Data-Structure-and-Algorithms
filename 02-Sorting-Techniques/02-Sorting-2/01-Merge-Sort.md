@@ -131,3 +131,9 @@ Sorted array: 11 12 22 25 64
 - Since the merging step is performed log n times (due to the recursive nature of merge sort), the overall time complexity is O(n log n).
 - The time complexity of merge sort is stable and does not depend on the initial order of the elements in the array.
 
+### Space Complexity
+```
+1. Merge sort has a space complexity of O(n) in the worst-case scenario.
+2. The algorithm requires additional space to store the temporary arrays used during the merging process.
+3. As the input size increases, the amount of additional space required grows linearly with the size of the input array.
+```
