@@ -14,7 +14,7 @@ Merge sort is a divide-and-conquer sorting algorithm that works by dividing the 
 7. Merge sort has a time complexity of O(n log n) in all cases, making it an efficient sorting algorithm for large datasets.
 ```
 
-![image](https://github.com/shahbazalamjobs/Data-Structure-and-Algorithms/assets/125631878/ff284e08-9891-4d3a-a1d4-20dfe443a19e | width=100)
+![image](https://github.com/shahbazalamjobs/Data-Structure-and-Algorithms/assets/125631878/ff284e08-9891-4d3a-a1d4-20dfe443a19e|width=100)
 ![image](https://github.com/shahbazalamjobs/Data-Structure-and-Algorithms/assets/125631878/b53c4fcf-866d-41c3-bd22-7b461ae6154b)
 
 ```cpp
