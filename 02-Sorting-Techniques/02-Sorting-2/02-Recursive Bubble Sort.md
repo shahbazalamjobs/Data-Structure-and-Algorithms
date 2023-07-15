@@ -1,4 +1,4 @@
-# Recursive Bubble Sort ALgorithm
+# Recursive Bubble Sort Algorithm
 - Recursive Bubble Sort is a variant of the Bubble Sort algorithm that uses recursion to repeatedly swap adjacent elements until the array is sorted. 
 - In each iteration, the largest element "bubbles" up to its correct position at the end of the array. The process is repeated recursively for the remaining unsorted portion of the array.
 
