@@ -49,11 +49,11 @@ int main() {
 - The `main` function demonstrates the usage of Recursive Bubble Sort by initializing an array, calling `bubbleSortRecursive` to sort the array, and printing the original and sorted arrays.
 
 
-Time Complexity:
+### Time Complexity:
 - Recursive Bubble Sort has a time complexity of O(N^2) for the worst and average cases, where N is the size of the array.
 - The total steps can be approximated as the sum of the first N natural numbers, which is (N * (N+1)) / 2.
 - Ignoring lower-order terms and constant coefficients, the time complexity simplifies to O(N^2).
 
-Space Complexity:
+### Space Complexity:
 - The space complexity of Recursive Bubble Sort is O(N) for auxiliary stack space.
 - Each recursive call creates additional stack frames, consuming space proportional to the size of the array.
