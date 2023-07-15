@@ -47,3 +47,13 @@ int main() {
 - In the code above, the `bubbleSortRecursive` function takes an array `arr` and the size `n` of the array. The base case of the recursion is when there is only one element or the array is empty, in which case the function returns. Otherwise, it performs one pass of the bubble sort algorithm by comparing adjacent elements and swapping them if they are in the wrong order.
 - After the pass, the largest element is guaranteed to be at the end of the array. The function then recursively calls itself on the remaining unsorted portion (i.e., `n-1` elements) of the array. This process continues until the array is sorted.
 - The `main` function demonstrates the usage of Recursive Bubble Sort by initializing an array, calling `bubbleSortRecursive` to sort the array, and printing the original and sorted arrays.
+
+
+Time Complexity:
+- Recursive Bubble Sort has a time complexity of O(N^2) for the worst and average cases, where N is the size of the array.
+- The total steps can be approximated as the sum of the first N natural numbers, which is (N * (N+1)) / 2.
+- Ignoring lower-order terms and constant coefficients, the time complexity simplifies to O(N^2).
+
+Space Complexity:
+- The space complexity of Recursive Bubble Sort is O(N) for auxiliary stack space.
+- Each recursive call creates additional stack frames, consuming space proportional to the size of the array.
