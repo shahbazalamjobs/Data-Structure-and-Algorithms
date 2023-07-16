@@ -13,7 +13,6 @@ In the iterative method, we did the following:
 ### Implementation
 ```cpp
 #include <iostream>
-
 using namespace std;
 
 void recursiveInsertionSort(int arr[], int n) {
