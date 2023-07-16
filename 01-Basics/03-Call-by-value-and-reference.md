@@ -45,3 +45,20 @@ int main() {
 In the above example, the `increment` function takes an argument `num` by reference using the `&` symbol. Inside the function, the `num` parameter is incremented, which directly modifies the original `x` variable in the `main` function.
 
 Call by reference allows functions to modify the original variables passed to them, while call by value only operates on a copy of the variable. Call by reference is useful when you want to modify the original variable or avoid the overhead of making a copy of large objects or arrays.
+
+**********
+
+Here's a comparison table highlighting the key differences between call by value and call by reference in C++:
+
+|              | Call by Value | Call by Reference |
+|--------------|---------------|-------------------|
+| Parameter Passing | A copy of the argument is passed to the function. | A reference to the argument is passed to the function. |
+| Effect on Original Argument | Modifications made to the parameter do not affect the original argument. | Modifications made to the parameter directly affect the original argument. |
+| Memory Overhead | Additional memory is required to store the copied argument. | No additional memory is required as it operates on the original argument. |
+| Performance | Can have performance overhead for large objects or complex data structures due to copying. | Generally more efficient, especially for large objects, as it avoids copying. |
+| Syntax | Pass by value is the default behavior in C++. | Pass by reference is denoted by using `&` in the function parameter. |
+| Usage | Suitable for small and simple data types or when modification of the original argument is not desired. | Suitable when modification of the original argument is required or to avoid the overhead of copying large objects. |
+
+- In summary, call by value creates a copy of the argument and operates on the copy within the function, while call by reference directly operates on the original argument.
+- Call by value is the default behavior in C++, while call by reference requires using the `&` symbol in the function parameter.
+- Call by reference is typically more efficient and useful when modification of the original argument is required or when dealing with large objects or data structures.
