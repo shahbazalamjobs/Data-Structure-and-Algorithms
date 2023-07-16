@@ -58,4 +58,5 @@ int main() {
 - If the array has more than one element, it recursively calls `recursiveInsertionSort` on the first `n-1` elements, effectively sorting the initial part of the array.
 - After the recursive call, the function considers the last element `arr[n-1]` and compares it with the elements in the sorted section from index `0` to `n-2`. It moves any element greater than the last element one position to the right until it finds the correct position for the last element.
 - Finally, the sorted array is printed in the `main` function.
-- The time complexity of recursive insertion sort is O(n^2), where n is the number of elements in the array. The space complexity is O(n) due to the recursive calls on the stack.
+- The time complexity of recursive insertion sort is O(n^2), where n is the number of elements in the array.
+- The space complexity is O(n) due to the recursive calls on the stack.
