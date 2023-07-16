@@ -48,7 +48,7 @@ Call by reference allows functions to modify the original variables passed to th
 
 **********
 
-Here's a comparison table highlighting the key differences between call by value and call by reference in C++:
+### Differences between call by value and call by reference in C++:
 
 |              | Call by Value | Call by Reference |
 |--------------|---------------|-------------------|
