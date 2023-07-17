@@ -52,28 +52,30 @@ By utilizing the STL, C++ programmers can leverage powerful and efficient data s
 #include <iostream>
 #include <vector>
 
+using namespace std;
+
 int main() {
     // Declaration and Initialization
-    std::vector<int> myVector = {1, 2, 3, 4, 5};
+    vector<int> myVector = {1, 2, 3, 4, 5};
 
     // Iterators
-    std::cout << "Vector elements (using iterators): ";
+    cout << "Vector elements (using iterators): ";
     for (auto it = myVector.begin(); it != myVector.end(); ++it) {
-        std::cout << *it << " ";
+        cout << *it << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     // Reverse Iterators
-    std::cout << "Vector elements in reverse (using reverse iterators): ";
+    cout << "Vector elements in reverse (using reverse iterators): ";
     for (auto rit = myVector.rbegin(); rit != myVector.rend(); ++rit) {
-        std::cout << *rit << " ";
+        cout << *rit << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     // Capacity
-    std::cout << "Size: " << myVector.size() << std::endl;
-    std::cout << "Max Size: " << myVector.max_size() << std::endl;
-    std::cout << "Capacity: " << myVector.capacity() << std::endl;
+    cout << "Size: " << myVector.size() << endl;
+    cout << "Max Size: " << myVector.max_size() << endl;
+    cout << "Capacity: " << myVector.capacity() << endl;
 
     // Modifiers
     myVector.push_back(6);                      // Add an element at the end
@@ -84,21 +86,21 @@ int main() {
 
     // Element Access
     if (!myVector.empty()) {
-        std::cout << "First element: " << myVector.front() << std::endl;
-        std::cout << "Last element: " << myVector.back() << std::endl;
-        std::cout << "Element at index 2: " << myVector.at(2) << std::endl;
-        std::cout << "Element at index 4: " << myVector[4] << std::endl;
+        cout << "First element: " << myVector.front() << endl;
+        cout << "Last element: " << myVector.back() << endl;
+        cout << "Element at index 2: " << myVector.at(2) << endl;
+        cout << "Element at index 4: " << myVector[4] << endl;
 
         // Direct access to the underlying array (requires C++11 or later)
         int* data = myVector.data();
-        std::cout << "Element at index 1 (using data()): " << data[1] << std::endl;
+        cout << "Element at index 1 (using data()): " << data[1] << endl;
     }
 
     // Clear the vector
     myVector.clear();
 
     // Check if the vector is empty
-    std::cout << "Vector is empty: " << (myVector.empty() ? "Yes" : "No") << std::endl;
+    cout << "Vector is empty: " << (myVector.empty() ? "Yes" : "No") << endl;
 
     return 0;
 }
@@ -123,50 +125,52 @@ int main() {
 #include <iostream>
 #include <array>
 
+using namespace std;
+
 int main() {
     // Create an array of integers with size 5
-    std::array<int, 5> myArray = {1, 2, 3, 4, 5};
+    array<int, 5> myArray = {1, 2, 3, 4, 5};
 
     // Using iterators
-    std::cout << "Using iterators:" << std::endl;
-    std::cout << "Forward traversal: ";
+    cout << "Using iterators:" << endl;
+    cout << "Forward traversal: ";
     for (auto it = myArray.begin(); it != myArray.end(); ++it) {
-        std::cout << *it << " ";
+        cout << *it << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
-    std::cout << "Reverse traversal: ";
+    cout << "Reverse traversal: ";
     for (auto it = myArray.rbegin(); it != myArray.rend(); ++it) {
-        std::cout << *it << " ";
+        cout << *it << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     // Capacity
-    std::cout << "Capacity functions:" << std::endl;
-    std::cout << "Size: " << myArray.size() << std::endl;
-    std::cout << "Max size: " << myArray.max_size() << std::endl;
-    std::cout << "Empty: " << (myArray.empty() ? "true" : "false") << std::endl;
+    cout << "Capacity functions:" << endl;
+    cout << "Size: " << myArray.size() << endl;
+    cout << "Max size: " << myArray.max_size() << endl;
+    cout << "Empty: " << (myArray.empty() ? "true" : "false") << endl;
 
     // Modifiers
-    std::cout << "Modifiers:" << std::endl;
+    cout << "Modifiers:" << endl;
     myArray.fill(0);  // Fill the array with a value
 
     myArray[2] = 10;  // Modify an element using index
 
-    std::array<int, 5> anotherArray = {6, 7, 8, 9, 10};
+    array<int, 5> anotherArray = {6, 7, 8, 9, 10};
     myArray.swap(anotherArray);  // Swap the contents of two arrays
 
     // Element access
-    std::cout << "Element access:" << std::endl;
-    std::cout << "First element: " << myArray.front() << std::endl;
-    std::cout << "Last element: " << myArray.back() << std::endl;
-    std::cout << "Element at index 2: " << myArray.at(2) << std::endl;
+    cout << "Element access:" << endl;
+    cout << "First element: " << myArray.front() << endl;
+    cout << "Last element: " << myArray.back() << endl;
+    cout << "Element at index 2: " << myArray.at(2) << endl;
 
-    std::cout << "Array elements: ";
+    cout << "Array elements: ";
     for (const auto& element : myArray) {
-        std::cout << element << " ";
+        cout << element << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     return 0;
 }
@@ -208,9 +212,11 @@ Array elements: 6 7 0 9 10
 #include <iostream>
 #include <deque>
 
+using namespace std;
+
 int main() {
     // Create a deque of integers
-    std::deque<int> myDeque;
+    deque<int> myDeque;
 
     // Push elements to the back of the deque
     myDeque.push_back(1);
@@ -222,27 +228,27 @@ int main() {
     myDeque.push_front(-1);
 
     // Using iterators
-    std::cout << "Using iterators:" << std::endl;
-    std::cout << "Forward traversal: ";
+    cout << "Using iterators:" << endl;
+    cout << "Forward traversal: ";
     for (auto it = myDeque.begin(); it != myDeque.end(); ++it) {
-        std::cout << *it << " ";
+        cout << *it << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
-    std::cout << "Reverse traversal: ";
+    cout << "Reverse traversal: ";
     for (auto it = myDeque.rbegin(); it != myDeque.rend(); ++it) {
-        std::cout << *it << " ";
+        cout << *it << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     // Capacity
-    std::cout << "Capacity functions:" << std::endl;
-    std::cout << "Size: " << myDeque.size() << std::endl;
-    std::cout << "Max size: " << myDeque.max_size() << std::endl;
-    std::cout << "Empty: " << (myDeque.empty() ? "true" : "false") << std::endl;
+    cout << "Capacity functions:" << endl;
+    cout << "Size: " << myDeque.size() << endl;
+    cout << "Max size: " << myDeque.max_size() << endl;
+    cout << "Empty: " << (myDeque.empty() ? "true" : "false") << endl;
 
     // Modifiers
-    std::cout << "Modifiers:" << std::endl;
+    cout << "Modifiers:" << endl;
     myDeque.pop_front();  // Remove the first element
     myDeque.pop_back();   // Remove the last element
 
@@ -252,19 +258,20 @@ int main() {
     myDeque.insert(myDeque.begin() + 2, 99);  // Insert element at position 2
 
     // Element access
-    std::cout << "Element access:" << std::endl;
-    std::cout << "First element: " << myDeque.front() << std::endl;
-    std::cout << "Last element: " << myDeque.back() << std::endl;
-    std::cout << "Element at index 2: " << myDeque.at(2) << std::endl;
+    cout << "Element access:" << endl;
+    cout << "First element: " << myDeque.front() << endl;
+    cout << "Last element: " << myDeque.back() << endl;
+    cout << "Element at index 2: " << myDeque.at(2) << endl;
 
-    std::cout << "Deque elements: ";
+    cout << "Deque elements: ";
     for (const auto& element : myDeque) {
-        std::cout << element << " ";
+        cout << element << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     return 0;
 }
+
 ```
 
 Output:
@@ -701,99 +708,117 @@ Map size after clearing: 0
 
 ## Algorithm
 
+1. Searching Algorithms:
 ```cpp
 #include <iostream>
 #include <vector>
 #include <algorithm>
 
+using namespace std;
+
 int main() {
-    std::vector<int> numbers = {5, 2, 8, 1, 9, 3, 7, 4, 6};
+    vector<int> numbers = {5, 2, 8, 1, 9, 3, 7, 4, 6};
 
-    // Sorting the vector in ascending order
-    std::sort(numbers.begin(), numbers.end());
-    std::cout << "Sorted numbers: ";
-    for (const auto& num : numbers) {
-        std::cout << num << " ";
-    }
-    std::cout << std::endl;
-
-    // Finding the minimum and maximum elements
-    auto minNum = std::min_element(numbers.begin(), numbers.end());
-    auto maxNum = std::max_element(numbers.begin(), numbers.end());
-    std::cout << "Minimum element: " << *minNum << std::endl;
-    std::cout << "Maximum element: " << *maxNum << std::endl;
-
-    // Reversing the vector
-    std::reverse(numbers.begin(), numbers.end());
-    std::cout << "Reversed numbers: ";
-    for (const auto& num : numbers) {
-        std::cout << num << " ";
-    }
-    std::cout << std::endl;
-
-    // Checking if the vector is sorted
-    bool isSorted = std::is_sorted(numbers.begin(), numbers.end());
-    std::cout << "Is the vector sorted? " << (isSorted ? "Yes" : "No") << std::endl;
-
-    // Counting the occurrences of a specific element
-    int count = std::count(numbers.begin(), numbers.end(), 5);
-    std::cout << "Number of occurrences of 5: " << count << std::endl;
-
-    // Removing duplicates from the vector
-    numbers.erase(std::unique(numbers.begin(), numbers.end()), numbers.end());
-    std::cout << "Vector without duplicates: ";
-    for (const auto& num : numbers) {
-        std::cout << num << " ";
-    }
-    std::cout << std::endl;
-
-    // Transforming elements in the vector
-    std::transform(numbers.begin(), numbers.end(), numbers.begin(), [](int num) {
-        return num * 2;
-    });
-    std::cout << "Doubled numbers: ";
-    for (const auto& num : numbers) {
-        std::cout << num << " ";
-    }
-    std::cout << std::endl;
-
-    // Checking if all elements satisfy a condition
-    bool allEven = std::all_of(numbers.begin(), numbers.end(), [](int num) {
-        return num % 2 == 0;
-    });
-    std::cout << "Are all elements even? " << (allEven ? "Yes" : "No") << std::endl;
-
-    // Finding the first element that matches a condition
-    auto firstEven = std::find_if(numbers.begin(), numbers.end(), [](int num) {
-        return num % 2 == 0;
-    });
-    if (firstEven != numbers.end()) {
-        std::cout << "First even number: " << *firstEven << std::endl;
+    // Linear search
+    auto result = find(numbers.begin(), numbers.end(), 7);
+    if (result != numbers.end()) {
+        cout << "Element found at index: " << distance(numbers.begin(), result) << endl;
     } else {
-        std::cout << "No even numbers found" << std::endl;
+        cout << "Element not found" << endl;
     }
 
-    // Accumulating the sum of elements
-    int sum = std::accumulate(numbers.begin(), numbers.end(), 0);
-    std::cout << "Sum of all elements: " << sum << std::endl;
+    // Binary search (requires a sorted range)
+    sort(numbers.begin(), numbers.end());
+    if (binary_search(numbers.begin(), numbers.end(), 7)) {
+        cout << "Element found" << endl;
+    } else {
+        cout << "Element not found" << endl;
+    }
 
     return 0;
 }
 ```
 
-Output:
+2. Sorting Algorithms:
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    vector<int> numbers = {5, 2, 8, 1, 9, 3, 7, 4, 6};
+
+    // Sort in ascending order
+    sort(numbers.begin(), numbers.end());
+    cout << "Sorted numbers: ";
+    for (const auto& num : numbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    // Sort in descending order
+    sort(numbers.rbegin(), numbers.rend());
+    cout << "Reverse sorted numbers: ";
+    for (const auto& num : numbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    // Partial sort (selects the k smallest elements)
+    partial_sort(numbers.begin(), numbers.begin() + 3, numbers.end());
+    cout << "Partial sorted numbers: ";
+    for (const auto& num : numbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
 ```
-Sorted numbers: 1 2 3 4 5 6 7 8 9 
-Minimum element: 1
-Maximum element: 9
-Reversed numbers: 9 8 7 6 5 4 3 2 1 
-Is the vector sorted? No
-Number of occurrences of 5: 1
-Vector without duplicates: 9 8 7 6 5 4 3 2 1
-Doubled numbers: 18 16 14 12 10 8 6 4 2
-Are all elements even? Yes
-First even number: 18
-Sum of all elements: 90
+
+3. Other Important Algorithms:
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    vector<int> numbers = {5, 2, 8, 1, 9, 3, 7, 4, 6};
+
+    // Count the occurrences of a specific element
+    int count = count(numbers.begin(), numbers.end(), 5);
+    cout << "Number of occurrences of 5: " << count << endl;
+
+    // Check if all elements satisfy a condition
+    bool allEven = all_of(numbers.begin(), numbers.end(), [](int num) {
+        return num % 2 == 0;
+    });
+    cout << "Are all elements even? " << (allEven ? "Yes" : "No") << endl;
+
+    // Find the first element that matches a condition
+    auto firstEven = find_if(numbers.begin(), numbers.end(), [](int num) {
+        return num % 2 == 0;
+    });
+    if (firstEven != numbers.end()) {
+        cout << "First even number: " << *firstEven << endl;
+    } else {
+        cout << "No even numbers found" << endl;
+    }
+
+    // Reverse the order of elements
+    reverse(numbers.begin(), numbers.end());
+    cout << "Reversed numbers: ";
+    for (const auto& num : numbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
 ```
 
 **********
