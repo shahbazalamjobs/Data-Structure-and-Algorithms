@@ -697,8 +697,103 @@ Map size after clearing: 0
 ```
 
 **********
+## STL Algorithm 
 
+## Algorithm
 
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
+int main() {
+    std::vector<int> numbers = {5, 2, 8, 1, 9, 3, 7, 4, 6};
+
+    // Sorting the vector in ascending order
+    std::sort(numbers.begin(), numbers.end());
+    std::cout << "Sorted numbers: ";
+    for (const auto& num : numbers) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    // Finding the minimum and maximum elements
+    auto minNum = std::min_element(numbers.begin(), numbers.end());
+    auto maxNum = std::max_element(numbers.begin(), numbers.end());
+    std::cout << "Minimum element: " << *minNum << std::endl;
+    std::cout << "Maximum element: " << *maxNum << std::endl;
+
+    // Reversing the vector
+    std::reverse(numbers.begin(), numbers.end());
+    std::cout << "Reversed numbers: ";
+    for (const auto& num : numbers) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    // Checking if the vector is sorted
+    bool isSorted = std::is_sorted(numbers.begin(), numbers.end());
+    std::cout << "Is the vector sorted? " << (isSorted ? "Yes" : "No") << std::endl;
+
+    // Counting the occurrences of a specific element
+    int count = std::count(numbers.begin(), numbers.end(), 5);
+    std::cout << "Number of occurrences of 5: " << count << std::endl;
+
+    // Removing duplicates from the vector
+    numbers.erase(std::unique(numbers.begin(), numbers.end()), numbers.end());
+    std::cout << "Vector without duplicates: ";
+    for (const auto& num : numbers) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    // Transforming elements in the vector
+    std::transform(numbers.begin(), numbers.end(), numbers.begin(), [](int num) {
+        return num * 2;
+    });
+    std::cout << "Doubled numbers: ";
+    for (const auto& num : numbers) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    // Checking if all elements satisfy a condition
+    bool allEven = std::all_of(numbers.begin(), numbers.end(), [](int num) {
+        return num % 2 == 0;
+    });
+    std::cout << "Are all elements even? " << (allEven ? "Yes" : "No") << std::endl;
+
+    // Finding the first element that matches a condition
+    auto firstEven = std::find_if(numbers.begin(), numbers.end(), [](int num) {
+        return num % 2 == 0;
+    });
+    if (firstEven != numbers.end()) {
+        std::cout << "First even number: " << *firstEven << std::endl;
+    } else {
+        std::cout << "No even numbers found" << std::endl;
+    }
+
+    // Accumulating the sum of elements
+    int sum = std::accumulate(numbers.begin(), numbers.end(), 0);
+    std::cout << "Sum of all elements: " << sum << std::endl;
+
+    return 0;
+}
+```
+
+Output:
+```
+Sorted numbers: 1 2 3 4 5 6 7 8 9 
+Minimum element: 1
+Maximum element: 9
+Reversed numbers: 9 8 7 6 5 4 3 2 1 
+Is the vector sorted? No
+Number of occurrences of 5: 1
+Vector without duplicates: 9 8 7 6 5 4 3 2 1
+Doubled numbers: 18 16 14 12 10 8 6 4 2
+Are all elements even? Yes
+First even number: 18
+Sum of all elements: 90
+```
 
 **********
