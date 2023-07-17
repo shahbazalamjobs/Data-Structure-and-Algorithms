@@ -12,6 +12,8 @@
 
 By utilizing the STL, C++ programmers can leverage powerful and efficient data structures and algorithms, leading to more maintainable and reusable code.
 
+**********
+
 - **Capacity**:
   - The capacity-related operations provide information about the vector's size and its reserved memory space. Some of the commonly used capacity functions are:
     - `size()`: Returns the number of elements in the vector.
