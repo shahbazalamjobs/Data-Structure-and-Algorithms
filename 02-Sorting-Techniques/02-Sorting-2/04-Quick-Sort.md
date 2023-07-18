@@ -69,7 +69,7 @@ int main() {
 }
 ```
 
-Approch
+### Approch
 
 1. The code implements the QuickSort algorithm, which follows a divide-and-conquer strategy to sort an array efficiently.
 2. The `partition` function selects a pivot (in this case, the last element of the array) and partitions the other elements into two sub-arrays based on their relation to the pivot.
@@ -77,3 +77,7 @@ Approch
 4. The `swap` function is used to swap two elements in the array.
 5. The `main` function initializes an array, calls the `quickSort` function to sort the array, and then prints the original and sorted arrays.
 
+### Time and Space Complexity
+
+1. Time Complexity: The average and best-case time complexity of the QuickSort algorithm implemented in the code is O(n log n), while the worst-case time complexity is O(n^2).
+2. Space Complexity: The space complexity of the code is O(log n) on average due to the recursive function calls, with a worst-case space complexity of O(n) if the recursion depth reaches the number of elements in the array.
