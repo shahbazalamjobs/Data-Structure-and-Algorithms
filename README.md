@@ -15,5 +15,5 @@
 # DSA Notes by Abdul Bari
 
 1) https://github.com/parasguglani1/DSA_Practice
-2)
-3) https://github.com/najm09/DataStructure
+2) https://github.com/najm09/DataStructure
+
