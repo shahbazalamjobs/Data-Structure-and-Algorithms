@@ -81,3 +81,77 @@ int main() {
 
 1. Time Complexity: The average and best-case time complexity of the QuickSort algorithm implemented in the code is O(n log n), while the worst-case time complexity is O(n^2).
 2. Space Complexity: The space complexity of the code is O(log n) on average due to the recursive function calls, with a worst-case space complexity of O(n) if the recursion depth reaches the number of elements in the array.
+
+***** *****
+
+
+Abdul Bari code
+```cpp
+#include <iostream>
+using namespace std;
+
+void swap(int *x, int *y)
+{
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+int partition(int A[], int l, int h)
+{
+    int pivot = A[l];
+    int i = l, j = h;
+
+    do
+    {
+        do
+        {
+            i++;
+        } while (A[i] <= pivot);
+        do
+        {
+            j--;
+        } while (A[j] > pivot);
+
+        if (i < j)
+            swap(&A[i], &A[j]);
+    } while (i < j);
+
+    swap(&A[l], &A[j]);
+    return j;
+}
+
+void QuickSort(int A[], int l, int h)
+{
+    int j;
+
+    if (l < h)
+    {
+        j = partition(A, l, h);
+        QuickSort(A, l, j);
+        QuickSort(A, j + 1, h);
+    }
+}
+
+int main()
+{
+    int A[] = {11, 13, 7, 12, 16, 9, 24, 5, 10, 3}, n = 10, i;
+
+    QuickSort(A, 0, n);
+
+    for (i = 0; i < 10; i++)
+        cout << A[i] << " ";
+    cout << "\n";
+
+    return 0;
+}
+```
+```cpp
+1. The code implements the QuickSort algorithm, which is a widely used sorting algorithm that sorts an array of integers in ascending order.
+2. The `swap` function is used to swap the values of two integers by taking their memory addresses as input.
+3. The `partition` function selects a pivot element from the array and rearranges the elements such that all elements smaller than the pivot are on the left side, and all elements greater than the pivot are on the right side.
+4. The `QuickSort` function recursively calls itself to sort the subarrays formed by the partitioning process.
+5. In the `main` function, an array `A` is defined with 10 integer elements, and the `QuickSort` function is called to sort the array. Finally, the sorted array is printed to the console.
+```
+
+
