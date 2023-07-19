@@ -85,7 +85,8 @@ int main() {
 ***** *****
 
 
-Abdul Bari code
+### 2nd Quick Sort method
+`by Abdul Bari code`
 ```cpp
 #include <iostream>
 using namespace std;
@@ -146,6 +147,7 @@ int main()
     return 0;
 }
 ```
+### Approach
 ```cpp
 1. The code implements the QuickSort algorithm, which is a widely used sorting algorithm that sorts an array of integers in ascending order.
 2. The `swap` function is used to swap the values of two integers by taking their memory addresses as input.
