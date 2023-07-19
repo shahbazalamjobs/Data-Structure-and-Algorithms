@@ -148,12 +148,11 @@ int main()
 }
 ```
 ### Approach
-```cpp
 1. The code implements the QuickSort algorithm, which is a widely used sorting algorithm that sorts an array of integers in ascending order.
 2. The `swap` function is used to swap the values of two integers by taking their memory addresses as input.
 3. The `partition` function selects a pivot element from the array and rearranges the elements such that all elements smaller than the pivot are on the left side, and all elements greater than the pivot are on the right side.
 4. The `QuickSort` function recursively calls itself to sort the subarrays formed by the partitioning process.
 5. In the `main` function, an array `A` is defined with 10 integer elements, and the `QuickSort` function is called to sort the array. Finally, the sorted array is printed to the console.
-```
+
 
 
