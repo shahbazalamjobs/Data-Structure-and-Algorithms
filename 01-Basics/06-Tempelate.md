@@ -1,4 +1,4 @@
-In C++, there are three main types of templates: function templates, class templates, and template specialization. Here's an explanation of each type along with an example code snippet for each:
+- In C++, there are three main types of templates: function templates, class templates, and template specialization. Here's an explanation of each type along with an example code snippet for each:
 
 1. Function Templates:
 Function templates allow you to define a generic function that can be used with different data types.
