@@ -37,19 +37,21 @@ Class templates allow you to define a generic class that can work with different
 
 ```cpp
 #include <iostream>
+
 using namespace std;
 
-// Class template for a generic container
 template<typename T>
 class MyContainer {
 private:
     T data;
 
 public:
-    MyContainer(T value) : data(value) {}
+    MyContainer(T value) {
+        data = value;
+    }
 
     void printData() {
-        cout << "Data: " << data << std::endl;
+        cout << "Data: " << data << endl;
     }
 };
 
