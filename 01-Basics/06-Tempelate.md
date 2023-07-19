@@ -31,6 +31,7 @@ int main() {
     return 0;
 }
 ```
+<br> <br>
 
 2. Class Templates:
 Class templates allow you to define a generic class that can work with different data types. The template parameters can be used as the types for member variables, member functions, or even the base class.
@@ -65,6 +66,7 @@ int main() {
     return 0;
 }
 ```
+<br> <br>
 
 3. Template Specialization:
 Template specialization allows you to provide a specialized implementation of a template for a specific type.
