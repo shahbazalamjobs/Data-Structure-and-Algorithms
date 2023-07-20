@@ -136,3 +136,104 @@ Sorted array: 11 12 22 25 64
 2. The algorithm requires additional space to store the temporary arrays used during the merging process.
 3. As the input size increases, the amount of additional space required grows linearly with the size of the input array.
 
+**********
+
+### Merge Sort using Vector
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+// Merge two sorted subarrays into one sorted array
+void merge(vector<int>& arr, int left, int middle, int right) {
+    int i, j, k;
+    int n1 = middle - left + 1;
+    int n2 = right - middle;
+
+    // Create temporary arrays
+    vector<int> L(n1), R(n2);
+
+    // Copy data to temporary arrays L and R
+    for (i = 0; i < n1; i++)
+        L[i] = arr[left + i];
+    for (j = 0; j < n2; j++)
+        R[j] = arr[middle + 1 + j];
+
+    // Merge the temporary arrays back into arr[left..right]
+    i = 0;
+    j = 0;
+    k = left;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    // Copy the remaining elements of L and R, if any
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+}
+
+// Merge Sort function
+void mergeSort(vector<int>& arr, int left, int right) {
+    if (left < right) {
+        int middle = left + (right - left) / 2;
+
+        // Sort first and second halves
+        mergeSort(arr, left, middle);
+        mergeSort(arr, middle + 1, right);
+
+        // Merge the sorted halves
+        merge(arr, left, middle, right);
+    }
+}
+
+int main() {
+    vector<int> arr = {38, 27, 43, 3, 9, 82, 10};
+    int n = arr.size();
+
+    cout << "Original Array: ";
+    for (int num : arr) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    mergeSort(arr, 0, n - 1);
+
+    cout << "Sorted Array: ";
+    for (int num : arr) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+```
+
+1. Merge Sort is a sorting algorithm that uses the "divide and conquer" approach to sort an array or a vector efficiently.
+2. The `merge()` function is used to merge two sorted subarrays into one sorted array.
+3. The `mergeSort()` function is the main function that recursively divides the vector into smaller subarrays and calls `merge()` to combine them back into a sorted array.
+4. The `mergeSort()` function has three parameters: the vector to be sorted, the starting index of the subarray (`left`), and the ending index of the subarray (`right`).
+5. Inside `mergeSort()`, if the `left` index is less than the `right` index, it calculates the middle index (`middle`) and calls `mergeSort()` recursively for the left and right halves of the vector.
+6. The base case of the recursion is when the `left` index becomes greater than or equal to the `right` index, which means there's only one element in the subarray, and it's already sorted.
+7. The `merge()` function takes the original vector, the indices of the two sorted subarrays (`left` to `middle` and `middle+1` to `right`), and merges them into one sorted array.
+8. It creates two temporary vectors `L` and `R` to store the elements of the two subarrays.
+9. The function then compares elements from `L` and `R` one by one and puts the smaller element back into the original vector.
+10. After merging, the subarray from `left` to `right` becomes sorted.
+11. Finally, in the `main()` function, we define an input vector, call `mergeSort()` to sort it, and then print the sorted array.
+12. Merge Sort has a time complexity of O(n log n) and is a stable sorting algorithm, meaning equal elements retain their relative order in the sorted output.
