@@ -89,3 +89,39 @@ Sorted array: 11 12 22 25 34 64 90
 ### Space Complexity:
 - The space complexity of the bubble sort algorithm is O(1) because it uses a constant amount of extra space for temporary variables during the swapping process.
 
+**********
+
+### Optimized Bubble Sort with Early Termination:
+```cpp
+#include <iostream>
+using namespace std;
+
+void bubbleSort(int arr[], int n) {
+    bool swapped;
+    for (int i = 0; i < n - 1; i++) {
+        swapped = false;
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr[j], arr[j + 1]);
+                swapped = true;
+            }
+        }
+        // If no two elements were swapped in the inner loop, the array is already sorted.
+        if (!swapped)
+            break;
+    }
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    bubbleSort(arr, n);
+    cout << "Sorted array: ";
+    for (int i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    return 0;
+}
+```
+
+- Time Complexity: O(n^2) (in the worst case)
+- In the best-case scenario, when the array is already sorted, the time complexity can be reduced to O(n) since the optimized version checks if any swaps occurred in the previous pass and terminates early if no swaps were made. However, in the worst-case scenario, where the array is in reverse order, it will still perform O(n^2) comparisons and swaps, making it the same as the classic Bubble Sort.
