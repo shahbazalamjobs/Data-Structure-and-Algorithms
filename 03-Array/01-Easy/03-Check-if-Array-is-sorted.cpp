@@ -6,7 +6,7 @@ class Solution {
 public:
     bool arraySortedOrNot(int arr[], int n) {
         // Single element is always sorted
-        if (n == 1 || n == 0)
+        if (n == 1 || n == 0)    // code will work with this if statement 
         {
             return true;
         }
