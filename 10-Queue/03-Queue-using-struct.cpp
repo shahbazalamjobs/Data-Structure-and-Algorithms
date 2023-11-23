@@ -83,6 +83,8 @@ int main() {
     enqueue(&myQueue, 10);
     enqueue(&myQueue, 20);
     enqueue(&myQueue, 30);
+    enqueue(&myQueue, 40);
+    enqueue(&myQueue, 60);
 
     displayQueue(&myQueue);
 
