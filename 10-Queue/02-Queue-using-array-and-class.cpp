@@ -78,6 +78,17 @@ public:
 
         return arr[rear];
     }
+    
+    void print() {
+        if (isEmpty()) {
+            cout << "Queue is empty." << endl;
+        } else {
+            for (int i = front; i <= rear; ++i) {
+                cout << arr[i] << " ";
+            }
+            cout << endl;
+        }
+    }
 };
 
 int main() {
