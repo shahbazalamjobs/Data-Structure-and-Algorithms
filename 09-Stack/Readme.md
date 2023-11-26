@@ -18,7 +18,7 @@ int main()
     for(int i=1;i<=5;i++)
     s.push(i);
 
-    // To insert an element in the stack.
+    // Emplace: To insert an element in the stack.
     s.emplace(1);
     s.emplace(2);
     
